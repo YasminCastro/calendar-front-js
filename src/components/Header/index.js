@@ -13,7 +13,7 @@ import {
 import { useCalendar } from "../../providers/calendarProvider";
 import capitalizeFirstLetter from "../../utils/capitalizeFirstLetter";
 
-const Header = () => {
+function Header() {
   const { selectedDate, setSelectedDate, today, calendar } = useCalendar();
 
   if (calendar.length === 0) {
@@ -43,6 +43,6 @@ const Header = () => {
       </HeaderContainer>
     </HeaderWrapper>
   );
-};
+}
 
 export default Header;

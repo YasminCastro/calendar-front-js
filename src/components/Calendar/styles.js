@@ -102,10 +102,7 @@ export const DayButton = styled.button`
   justify-content: center;
 `;
 
-export const ReminderButton =
-  styled.button <
-  { color: string } >
-  `
+export const ReminderButton = styled.button`
   width: 100%;
   border: none;
   cursor: pointer;

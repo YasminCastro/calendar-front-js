@@ -10,7 +10,7 @@ import { useReminder } from "../../../providers/reminderProvider";
 import { ErrorMessage } from "../../../styles/errorMessage";
 import { colors } from "../../../styles/GlobalStyles";
 
-const ReminderModal = ({ open, setOpen, day, reminderId }) => {
+function ReminderModal({ open, setOpen, day, reminderId }) {
   const handleClose = () => setOpen(false);
   const [color, setColor] = useState("#039be5");
   const [city, setCity] = useState("");
@@ -139,6 +139,6 @@ const ReminderModal = ({ open, setOpen, day, reminderId }) => {
       </ModalBox>
     </Modal>
   );
-};
+}
 
 export default ReminderModal;

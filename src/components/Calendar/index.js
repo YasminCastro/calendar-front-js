@@ -24,7 +24,7 @@ const weekDaysFull = [
 
 const weekDaysSmall = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
-const Calendar = () => {
+function Calendar() {
   const { calendar, selectedDate, today } = useCalendar();
   const { reminders } = useReminder();
   const [createReminderModal, setCreateReminderModal] = useState(false);
@@ -36,12 +36,12 @@ const Calendar = () => {
     return <></>;
   }
 
-  const dateClickHandler = (date: any) => {
+  const dateClickHandler = (date) => {
     setCreateReminderModal(true);
     setReminderDate(date);
   };
 
-  const reminderClickHandler = (reminderId: any) => {
+  const reminderClickHandler = (reminderId) => {
     setReminderId(reminderId);
     setEditReminderModal(true);
   };
@@ -54,22 +54,22 @@ const Calendar = () => {
       <CalendarTable>
         <thead>
           <tr className="weekdays weekFull">
-            {weekDaysFull.map((weekday: string) => (
+            {weekDaysFull.map((weekday) => (
               <th key={weekday}>{weekday}</th>
             ))}
           </tr>
           <tr className="weekdays weekSmall">
-            {weekDaysSmall.map((weekday: string) => (
+            {weekDaysSmall.map((weekday) => (
               <th key={weekday}>{weekday}</th>
             ))}
           </tr>
         </thead>
 
         <tbody>
-          {calendar.map((week: any, index) => {
+          {calendar.map((week, index) => {
             return (
               <tr key={index} className="days">
-                {week.days.map((dayObject: any) => {
+                {week.days.map((dayObject) => {
                   const day = moment(dayObject).format("DD");
                   const month = moment(dayObject).format("MM");
                   const fullDate = moment(dayObject).format("DD-MM-YYYY");
@@ -92,7 +92,7 @@ const Calendar = () => {
                       >
                         {day}
                       </DayButton>
-                      {reminders.map((reminder: any) => {
+                      {reminders.map((reminder) => {
                         const date = moment(reminder.date).format("DD-MM-YYYY");
 
                         if (date === fullDate) {
@@ -137,6 +137,6 @@ const Calendar = () => {
       )}
     </MonthContainer>
   );
-};
+}
 
 export default Calendar;
