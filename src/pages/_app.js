@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       <LocalizationProvider dateAdapter={AdapterMoment}>
         <CalendarProvider>
           <ReminderProvider>
-            <Component {...pageProps} />
+            <Component {...pageProps} />{" "}
           </ReminderProvider>
         </CalendarProvider>
       </LocalizationProvider>

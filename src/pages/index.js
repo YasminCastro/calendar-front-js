@@ -1,5 +1,5 @@
-import Calendar from "../components/Calendar";
-import Header from "../components/Header";
+import Calendar from "../components/Calendar/index";
+import Header from "../components/Header/index";
 
 export default function Home() {
   return (
