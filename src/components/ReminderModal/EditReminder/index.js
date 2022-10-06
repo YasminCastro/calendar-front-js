@@ -16,7 +16,7 @@ function ReminderModal({ open, setOpen, day, reminderId }) {
   const [city, setCity] = useState("");
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-  const [date, setDate] = React.useState < any > moment(day, "DD-MM-YYYY");
+  const [date, setDate] = useState(moment(day, "DD-MM-YYYY"));
   const { setRefreshReminders } = useReminder();
 
   useEffect(() => {
